@@ -7,7 +7,7 @@ public:
     int Add (double, double);
     int Sub (double, double);
     int Mul (double, double);
+    double Average(double, double);  // Додано декларацію для середнього
 };
 
 #endif // CALCULATOR_H
-
