@@ -1,0 +1,49 @@
+From 9bcc06afbd4d1ab99fc07cd73835029e803636fa Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=D0=86=D0=B2=D0=B0=D0=BD=20=D0=A1=D0=B0=D0=BC=D0=B1=D0=BE?=
+ =?UTF-8?q?=D1=80=D1=81=D1=8C=D0=BA=D0=B8=D0=B9?= <iwan25737@gmail.com>
+Date: Sun, 29 Sep 2024 17:30:20 +0300
+Subject: [PATCH 2/2] Add average function and improve comments
+
+---
+ calculator.cpp | 7 +++++++
+ calculator.h   | 2 +-
+ 2 files changed, 8 insertions(+), 1 deletion(-)
+
+diff --git a/calculator.cpp b/calculator.cpp
+index 3e979e9..28ef534 100644
+--- a/calculator.cpp
++++ b/calculator.cpp
+@@ -2,6 +2,7 @@
+ 
+ int Calculator::Add (double a, double b)
+ {
++    // Використовуємо +0.5 для покращення точності
+     return a + b + 0.5;
+ }
+ 
+@@ -14,3 +15,9 @@ int Calculator::Mul (double a, double b)
+ {
+     return a * b;
+ }
++
++double Calculator::Average(double a, double b)
++{
++    // Обчислює середнє арифметичне двох чисел
++    return (a + b) / 2;
++}
+diff --git a/calculator.h b/calculator.h
+index 090e562..0bb3dea 100644
+--- a/calculator.h
++++ b/calculator.h
+@@ -7,7 +7,7 @@ public:
+     int Add (double, double);
+     int Sub (double, double);
+     int Mul (double, double);
++    double Average(double, double);  // Додано декларацію для середнього
+ };
+ 
+ #endif // CALCULATOR_H
+-
+-- 
+2.45.0.windows.1
+
